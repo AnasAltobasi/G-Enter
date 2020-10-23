@@ -8,7 +8,9 @@
 body{
     width: 100%;
     background-color: #ffffff;
-	 font-family: Montserrat-Regular, sans-serif;
+   font-family: Montserrat-Regular, sans-serif;
+   margin: 0px; 
+	  padding: 0px; 
 }
 
 .navbar-expand-lg .navbar-collapse{
@@ -34,7 +36,6 @@ body{
    direction: rtl;
    text-align: right
 }
-
 
 
 
@@ -459,6 +460,229 @@ textarea.input1 + .shadow-input1 {
     opacity: 1;
   }
 }
+
+
+/* Start Css To TypeWrite */
+.welcome {
+  text-align: center;
+  margin: 30px auto;
+}
+.welcome p {
+  font-weight: bold;
+  font-size: 25px;
+}
+/* End Css To TypeWrite */
+
+
+/* Start Css To Image */
+.carousel-inner .carousel-item {
+  width: 100%;
+}
+.carousel-inner .carousel-item img {
+  width: 100%;
+ margin: 0 auto;
+ box-shadow: -20px -10px 8px grey;
+}
+/* Start Css To Image */
+
+/* Start Css To SameHeight */
+.same-height {
+overflow: hidden;
+margin-top: 50px;
+}
+.same-height div {
+  width: 30%;
+  background-color: #45c2b4;
+  float: left;
+  padding: 10px;
+  margin-right: 2%; 
+}
+/* End Css To SameHeight */
+
+/*Start Benefits */
+.benefits .benefit1 {
+  width: 250px;
+  height: 300px;
+  background-color: silver;
+  position: relative;
+  margin: 30px ;
+  transition: all 1.5s  ease-in-out;
+  transform-style: preserve-3d;
+}
+.benefits .benefit1:first-child:hover {
+  transform: rotateY(180deg);
+}
+.benefits .benefit1:nth-child(2):hover {
+  transform: rotateX(180deg);
+}
+.benefits .benefit1:nth-child(3):hover {
+  transform: rotateY(180deg);
+}
+.benefits .benefit1 > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 100%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.benefits .benefit1 .front {
+  z-index: 2;
+  backface-visibility: hidden;
+  border: 1px solid rgb(128, 128, 128);
+}
+.benefits .benefit1 .front header {
+  width: 100%;
+  height: 180px;
+  background-color:#45c2b4;
+}
+.benefits .benefit1 .front header img {
+  width: 50%;
+  border-radius: 50% 50%;
+  position: relative;
+  top: 25px;
+}
+.benefits .benefit1 .front h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.benefits .benefit1 .front span {
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  color: #45c2b4;
+}
+.benefits .benefit1 .back h4 {
+  font-weight: bolder;
+  color: #45c2b4;
+  text-shadow: -10px 5px 8px red;
+}
+.benefits .benefit1 .back p {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: bolder;
+  text-align: left;
+  padding: 5px;
+  margin-top: 30px;
+}
+.benefits .benefit1:nth-child(1) .back {
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+.benefits .benefit1:nth-child(2) .back{
+  z-index: 1;
+  transform: rotateX(180deg);
+}
+.benefits .benefit1:nth-child(3) .back{
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.benefits .benefit1 .back span {
+  font-weight: bolder;
+  color: red;
+}
+
+
+
+
+/* Start Css To Photo */
+.photo {
+  height: 350px;
+  background-color: #45c2b4;
+  margin-top: 60px;
+}
+.photo .section1 {
+  padding: 50px;
+}
+.Caption {
+  margin-top: 50px;
+  margin-bottom: -45px;
+}
+.Caption h4  {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 8px grey;
+  transition: all 1s ease-in-out;
+}
+.Caption h4:hover {
+  color:   #45c2b4;
+  text-shadow: -10px 5px 8px grey;
+}
+/* End Css To Photo */
+
+/* Start Css To Company */
+.Head h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  background-color: white;
+  padding: 20px;
+  transition: all 1s ease-in-out;
+}
+.Head h3:hover {
+  color: #45c2b4;
+  text-shadow: -10px 5px 8px grey;
+}
+.Company {
+  border: 5px solid #45c2b4;
+  box-shadow: -10px -5px 8px #45c2b4;
+}
+.Company >div {
+  padding: 20px 10px 10px;
+}
+.Company .company1,.Company .company2,.Company .company3,.Company .company4 {
+  margin-bottom: 30px;
+}
+.Company >div a img {
+  border-radius: 5px;
+}
+.Company .company1 a img {
+  width: 100%;
+  transition: all 1.5 ease-in-out;
+}
+.Company .company1 a img:hover {
+  transform: rotate(90deg);
+}
+.Company .company2 a img {
+  width: 100%;
+  transition: all 2s ease-in-out;
+}
+.Company .company2 a img:hover {
+  transform: rotate(360deg);
+}
+.Company .company3 a img {
+  width: 100%;
+  transition: all 1s ease-in-out;
+}
+.Company .company3 a img:hover {
+  box-shadow: 10px 5px 8px grey;
+}
+.Company .company4 a img {
+  width: 100%;
+  transition: all 1s ease-in-out;
+}
+.Company .company4 a img:hover {
+  width: 103%;
+}
+.Company >div a h3 span{
+  color: grey;
+  font-weight: bold;
+  border: 3px solid grey;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+}
+.Company >div a h3 span:hover{
+  color: white;
+  background-color:  #45c2b4;
+  border-color:  #45c2b4;
+}
+/* End Css To Company */
 .main {
 	max-height: 550px;;
 	background-color: #45C2B4;
@@ -629,4 +853,255 @@ textarea.input1 + .shadow-input1 {
 		font-size: auto;
 	}
  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Media Query To Benefits*/
+
+/* Width 500px*/
+/* @media (min-width: 1301px) and (max-width: 1500px) {
+  .photo {
+    height: 300px;
+  }
+} */
+@media (min-width: 1075px) and (max-width: 1300px) {
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 7px;
+    margin-top: 30px;
+  }
+  .photo {
+    height: 290px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1074px) {
+  .benefits .benefit1 {
+    margin: 20px auto;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 7px;
+    margin-top: 30px;
+  }
+  .photo {
+    height: 280px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .benefits .benefit1 {
+    margin: 50px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 35px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 7px;
+    margin-top: 30px;
+  }
+  .photo .section1 .gallery {
+    width: 160%;
+    margin-left: -70px;
+  }
+  .photo {
+    height: 300px;
+  }
+}
+@media (min-width: 567px) and (max-width: 767px) {
+  .benefits .benefit1 {
+    margin-left: 135px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 7px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 310px;
+  }
+ 
+}
+@media (min-width: 650px) and (max-width: 767px) {
+    /* Start Media To Company */
+    .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+      width: 60%;
+    }
+}
+@media (min-width: 576px) and (max-width: 649px) {
+   /* Start Media To Company */
+   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 70%;
+  }
+}
+@media (min-width: 551px) and (max-width: 575px) {
+  .benefits .benefit1 {
+    margin-left: 150px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 310px;
+  }
+   /* Start Media To Company */
+   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+}
+@media (min-width: 541px) and (max-width: 550px) {
+  .benefits .benefit1 {
+    margin-left: 140px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 300px;
+  }
+   /* Start Media To Company */
+   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+}
+@media (min-width: 526px) and (max-width: 540px) {
+  .benefits .benefit1 {
+    margin-left: 130px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 300px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+}
+@media (min-width: 501px) and (max-width: 525px) {
+  .benefits .benefit1 {
+    margin-left: 115px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 300px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+}
+/* Width 400px*/
+@media (min-width: 451px) and (max-width: 500px) {
+  .benefits .benefit1 {
+    margin-left: 100px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 270px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 80%;
+  }
+}
+@media (min-width: 426px) and (max-width: 450px) {
+  .benefits .benefit1 {
+    margin-left: 88px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 25px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 250px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 80%;
+  }
+}
+@media (min-width: 400px) and (max-width: 425px) {
+  .benefits .benefit1 {
+    margin-left: 75px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 230px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 80%;
+  }
 }
