@@ -363,6 +363,9 @@ textarea.input1 + .shadow-input1 {
   .container-contact1 {
     padding: 90px 80px 88px 90px;
   }
+  .dropdown{
+    width: 100%;
+  }
 
   .contact1-pic {
     width: 35%;

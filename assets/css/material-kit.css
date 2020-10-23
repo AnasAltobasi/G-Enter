@@ -10203,16 +10203,16 @@ button:focus {
 .btn,
 .btn.btn-default {
   color: #fff;
-  background-color: #999999;
-  border-color: #999999;
+  background-color: rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
   box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
 }
 
 .btn:hover,
 .btn.btn-default:hover {
   color: #fff;
-  background-color: #919191;
-  border-color: #7a7a7a;
+  background-color:rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
 }
 
 .btn:focus,
@@ -10222,8 +10222,8 @@ button:focus {
 .btn.btn-default.focus,
 .btn.btn-default:hover {
   color: #fff;
-  background-color: #919191;
-  border-color: #7a7a7a;
+  background-color:rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
 }
 
 .btn:active,
@@ -10235,9 +10235,9 @@ button:focus {
 .open>.btn.btn-default.dropdown-toggle,
 .show>.btn.btn-default.dropdown-toggle {
   color: #fff;
-  background-color: #919191;
-  border-color: #7a7a7a;
-  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
+  background-color: rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
+  box-shadow: 0 2px 2px 0 rgb(69, 194, 180), 0 3px 1px -2px rgb(69, 194, 180), 0 1px 5px 0rgb(69, 194, 180);
 }
 
 .btn:active:hover,
@@ -10265,19 +10265,19 @@ button:focus {
 .show>.btn.btn-default.dropdown-toggle:focus,
 .show>.btn.btn-default.dropdown-toggle.focus {
   color: #fff;
-  background-color: #919191;
-  border-color: #595959;
+  background-color: rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
 }
 
 .open>.btn.dropdown-toggle.bmd-btn-icon,
 .open>.btn.btn-default.dropdown-toggle.bmd-btn-icon {
   color: inherit;
-  background-color: #999999;
+  background-color: rgb(69, 194, 180);
 }
 
 .open>.btn.dropdown-toggle.bmd-btn-icon:hover,
 .open>.btn.btn-default.dropdown-toggle.bmd-btn-icon:hover {
-  background-color: #919191;
+  background-color: rgb(69, 194, 180);
 }
 
 .btn.disabled:focus,
@@ -10288,16 +10288,16 @@ button:focus {
 .btn.btn-default.disabled.focus,
 .btn.btn-default:disabled:focus,
 .btn.btn-default:disabled.focus {
-  background-color: #999999;
-  border-color: #999999;
+  background-color: rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
 }
 
 .btn.disabled:hover,
 .btn:disabled:hover,
 .btn.btn-default.disabled:hover,
 .btn.btn-default:disabled:hover {
-  background-color: #999999;
-  border-color: #999999;
+  background-color: rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
 }
 
 .btn:focus,
@@ -10306,13 +10306,13 @@ button:focus {
 .btn.btn-default:focus,
 .btn.btn-default:active,
 .btn.btn-default:hover {
-  box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+  box-shadow: 0 14px 26px -12px rgb(69, 194, 180), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgb(69, 194, 180);
 }
 
 .btn.btn-link,
 .btn.btn-default.btn-link {
   background-color: transparent;
-  color: #999999;
+  color: rgb(69, 194, 180);
   box-shadow: none;
 }
 
@@ -10323,14 +10323,14 @@ button:focus {
 .btn.btn-default.btn-link:focus,
 .btn.btn-default.btn-link:active {
   background-color: transparent;
-  color: #999999;
+  color: rgb(69, 194, 180);
 }
 
 .btn.btn-white,
 .btn.btn-white:focus,
 .btn.btn-white:hover {
   background-color: #ffffff;
-  color: #999999;
+  color: rgb(69, 194, 180);
 }
 
 .btn.btn-white.btn-link {
@@ -11201,9 +11201,9 @@ fieldset[disabled][disabled] .btn-group-raised .btn,
 .bg-inverse .btn.btn-outline-warning:focus,
 .bg-inverse .btn.btn-outline-warning.focus,
 .bg-inverse .btn.btn-outline-warning:hover {
-  color: #ff9800;
-  background-color: rgba(204, 204, 204, 0.15);
-  border-color: rgba(204, 204, 204, 0.15);
+  color: rgb(69, 194, 180);
+  background-color: rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
 }
 
 .bg-inverse .btn.btn-outline-warning:active,
@@ -11211,8 +11211,8 @@ fieldset[disabled][disabled] .btn-group-raised .btn,
 .open>.bg-inverse .btn.btn-outline-warning.dropdown-toggle,
 .show>.bg-inverse .btn.btn-outline-warning.dropdown-toggle {
   color: #ff9800;
-  background-color: rgba(204, 204, 204, 0.15);
-  border-color: rgba(204, 204, 204, 0.15);
+  background-color: rgb(69, 194, 180);
+  border-color: rgb(69, 194, 180);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -15998,8 +15998,8 @@ h2.title {
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a:active {
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
-  background-color: #9c27b0;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgb(69, 194, 180);
+  background-color: rgb(69, 194, 180);
   color: #fff !important;
 }
 

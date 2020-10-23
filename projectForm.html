@@ -22,11 +22,11 @@
         <link rel="stylesheet" type="text/css" href="css/util.css">
     </head>
     <style>
-        .form-check-label{
-            color: #000;
+        .dropdown-menu li a{
+            font-weight: bold;
         }
     </style>
-    <body>
+    <body style="background-color: #92E8DF">
         <!-- NavBar Start -->
         <nav class="navbar fixed-top navbar-expand-lg bg-primary ">
             <div class="container">
@@ -73,135 +73,54 @@
                     <br>
                     ملاحظة: الخدمة مدفوعة الأجر <b style="color: #45c2b4;">(بسعر منافس)</b>.
                     </span>
-                    <span class="contact1-form-title" style="padding-bottom: 20px; font-weight: bold;">
-                    القسم الاول: معلومات حول المشروع
-                    </span>
-                    <div class="wrap-input1 validate-input" style="text-align: right" >
-                        <label style="float:right;color: #000;">*نوع المشروع الذي تريد المساعدة به </label>
-                        <br>
-                        <div class="form-check">
-                            <label class="form-check-label" >
-                                <input class="form-check-input" type="checkbox" value="مشروع مادة">
-                                مشروع مادة
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        
-                        <div class="form-check disabled">
-                            <label class="form-check-label" >
-                                <input class="form-check-input" type="checkbox" value=" مشروع تخرج نهائي">
-                                مشروع تخرج نهائي
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="تصميم وتطوير مجسم">
-                            تصميم وتطوير مجسم
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="برمجة موقع الكتروني / تطبيق الكتروني و تفعيله">
-                                برمجة موقع الكتروني / تطبيق الكتروني و تفعيله
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value=" كتابة محتوى او تنسيق محتوى">
-                                كتابة محتوى او تنسيق محتوى
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="إنشاء عرض تقديمي - PowerPoint">
-                                إنشاء عرض تقديمي - PowerPoint
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="توفير فرص تدريب جامعية">
-                                توفير فرص تدريب جامعية
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        <span class="shadow-input1"></span>
-                       
-                       
-                    </div>
-        
                     <div class="wrap-input1 validate-input">
-                        <label style="float:right;text-align: right;direction: rtl;color: #000;">اعط تفاصيل حول الخدمة الذي/التي تريد أو ما طلب منك من المشرف في الجامعة ( سطرين كحد أقصى)*</label>
-                       <textarea name="data" id="data" cols="45" rows="5" style="border: 1px solid black; background-color: #dedede;text-align: right; direction: rtl;border-radius: 15px;"></textarea>
+                        <input class="input1" type="text" name="fullname" placeholder="الاسم من مقطعين *">
                         <span class="shadow-input1"></span>
                     </div>
+                    <div class="wrap-input1 validate-input">
+                        <input class="input1" type="email" name="email" placeholder="البريد الالكتروني*">
+                        <span class="shadow-input1"></span>
+                    </div>
+                    <div class="wrap-input1 validate-input">
+                        <input class="input1" type="text" name="numberphone" placeholder="رقم الهاتف *">
+                        <span class="shadow-input1"></span>
+                    </div>
+                    <div class="wrap-input1 validate-input">
+                        <input class="input1" type="text" name="uni_name" placeholder="اسم الجامعة *">
+                        <span class="shadow-input1"></span>
+                    </div>
+                    <div class="wrap-input1 validate-input">
+                        <input class="input1" type="text" name="major" placeholder="التخصص الجامعي *">
+                        <span class="shadow-input1"></span>
+                    </div>
+                    <label style="float:right;color: #000;font-size: 18px;">*نوع المشروع الذي تريد المساعدة به </label>
+                    <br>
+                    <div class="dropdown" name="Select" style="direction: rtl;">
+                        <a href="#" class="btn dropdown-toggle" data-toggle="dropdown" style="width: 100%;border-radius: 30px;font-size: 20px;">
+                            أختر النوع
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu" >
+                            <li><a value="1" >مشروع مادة</a></li>
+                            <li><a value="2">مشروع تخرج نهائي</a></li>
+                            <li><a value="3">تصميم وتطوير مجسم</a></li>
+                            <li class="divider"></li>
+                            <li><a value="4">برمجة موقع الكتروني / تطبيق الكتروني و تفعيله</a></li>
+                            <li><a value="5">توفير فرص تدريب جامعية</a></li>
+                            <li><a value="7">إنشاء عرض تقديمي - PowerPoint</a></li>
+                            <li class="divider"></li>
+                            <li><a name="8">كتابة محتوى او تنسيق محتوى</a></li>
+                        </ul>
+                    </div>
+                    <br>
                     <div class="wrap-input1 validate-input" >
                         <input class="input1" type="date" name="time" placeholder="موعد التسليم النهائي للمشروع (التاريخ والشهر) *">
                         <span class="shadow-input1"></span>
                     </div>
-                    <span class="contact1-form-title" style="padding-bottom: 20px; font-weight: bold;">
-                     القسم الثاني: معلومــات التواصل الخاصة بك
-                    </span>
-                    <div class="wrap-input1 validate-input" >
-                        <input class="input1" type="text" name="fullname" placeholder="الاسم من مقطعين *">
+                    <div class="wrap-input1 validate-input">
+                        <textarea placeholder="ملاحظات (إن وجد)" name="data" id="data" cols="40" rows="6" 
+                            style="border: 1px solid black;padding:10px 30px ;width: 100%;background-color: #dedede;text-align: right; direction: rtl;border-radius: 15px;"></textarea>
                         <span class="shadow-input1"></span>
-                    </div>
-                    
-                    <div class="wrap-input1 validate-input" >
-                        <input class="input1" type="text" name="numberphone" placeholder="رقم الهاتف *">
-                        <span class="shadow-input1"></span>
-                    </div>
-                    <div class="wrap-input1 validate-input" >
-                        <input class="input1" type="email" name="email" placeholder="البريد الالكتروني (ان وجد)">
-                        <span class="shadow-input1"></span>
-                    </div>
-                    <div class="wrap-input1 validate-input" >
-                        <input class="input1" type="text" name="major"
-                            placeholder="التخصص الجامعي *">
-                        <span class="shadow-input1"></span>
-                    </div>
-                    <div class="wrap-input1 validate-input" >
-                        <input class="input1" type="text" name="uni_name" placeholder="اسم الجامعة *">
-                        <span class="shadow-input1"></span>
-                    </div>
-                    <div class="wrap-input1 validate-input" >
-                        <label style="text-align: right;color: black; direction: rtl;">هل أنت متأكد من طلب المساعدة و تريد من فريق (G Projects) ان يتواصل معك هاتفياً لاعطائك المزيد من التفاصيل؟*</label>
-                        <div class="form-check form-check-radio" style="text-align: right;">
-                            <label class="form-check-label">
-                                <input class="form-check-input" name ="yes" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-                                نعم
-                                <span class="circle">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-radio" style="text-align: right;">
-                            <label class="form-check-label">
-                                <input class="form-check-input" name="no" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" >
-                               لا
-                                <span class="circle">
-                                    <span class="check"></span>
-                                </span>
-                            </label>
-                        </div>
                     </div>
                     <div class="container-contact1-form-btn">
                         <button class="contact1-form-btn submit">
@@ -217,11 +136,6 @@
         <br>
         <!-- Form End -->
 
-
-      
- 
-        
-      
         <!-- Footer Start -->
         <footer class="footer-distributed">
         
