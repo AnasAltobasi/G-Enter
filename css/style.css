@@ -620,6 +620,46 @@ margin-top: 50px;
 }
 /* End Css To Photo */
 
+/*Start progrees bar */
+.progrees {
+  margin-bottom: 100px;
+  border-bottom: 2px solid #45C2B4;
+  border-top: 2px solid red;
+}
+.animate-progrees {
+  width: 700px;
+  height: 30px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.animate-progrees span {
+  width: 0;
+  height: 100%;
+  display: block;
+  width: 40%;
+  color: white;
+  line-height: 30px;
+  text-indent: -18px;
+  padding-left: 50px;
+
+}
+.progrees-blue span {
+  background-color: #1abc9c;
+  
+}
+.progrees-red span {
+  background-color: #e74c3c;
+}
+.progrees-green span {
+  background-color: #2ecc71;
+}
+.progrees-purple span {
+  background-color: #9b59b6;
+}
+/*End progrees bar */
+
 /* Start Css To Company */
 .Head h3 {
   font-weight: bold;
