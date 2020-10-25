@@ -561,7 +561,7 @@ margin-top: 50px;
 .benefits .benefit1 .back h4 {
   font-weight: bolder;
   color: #45c2b4;
-  text-shadow: -10px 5px 8px red;
+  text-shadow: -10px 5px 8px #fff;
 }
 .benefits .benefit1 .back p {
   font-size: 20px;
