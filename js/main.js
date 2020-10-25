@@ -56,6 +56,22 @@ $(function(){
         });
     });
 
+    //Animated progrees
+
+    $('.animate-progrees span').each(function(){
+
+        $(this).animate({
+            width : $(this).attr('data-progrees') + '%'
+
+        }, 1000 , function() {
+            //Call Back Function After Animated
+
+            $(this).text($(this).attr('data-progrees') + '%');
+
+        });
+
+    });
+
 
 
 });
