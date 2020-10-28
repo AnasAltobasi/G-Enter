@@ -726,6 +726,61 @@ margin-top: 50px;
   border-color:  #45c2b4;
 }
 /* End Css To Company */
+/*Start progrees bar */
+.Title {
+  margin-bottom: -30px;
+}
+.Title h3 span {
+  background-color: #eeeeee;
+   font-size: 25px;
+   font-weight: bold;
+}
+.All {
+  padding: 30px;
+  border-bottom: 2px solid #45C2B4;
+  border-top: 2px solid red;
+}
+/* .progrees {
+  margin-bottom: 100px;
+  padding: 30px;
+  border-bottom: 2px solid #45C2B4;
+  border-top: 2px solid red;
+} */
+.progrees1 .animate-progrees {
+  width: 700px;
+  height: 30px;
+  /* margin: 20px auto; */
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px 5px;
+  padding: 0;
+  
+}
+.animate-progrees span {
+  width: 0;
+  height: 100%;
+  display: block;
+  width: 40%;
+  color: white;
+  line-height: 30px;
+  text-indent: -18px;
+  padding-left: 50px;
+
+}
+.progrees-blue span {
+  background-color: #1abc9c;
+}
+.progrees-red span {
+  background-color: #e74c3c;
+}
+.progrees-green span {
+  background-color: #2ecc71;
+}
+.progrees-purple span {
+  background-color: #9b59b6;
+}
+/*End progrees bar */
 .main {
 	max-height: 550px;;
 	background-color: #45C2B4;
@@ -897,261 +952,6 @@ margin-top: 50px;
 	}
  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Start Media Query To Benefits*/
-
-/* Width 500px*/
-/* @media (min-width: 1301px) and (max-width: 1500px) {
-  .photo {
-    height: 300px;
-  }
-} */
-@media (min-width: 1075px) and (max-width: 1300px) {
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 7px;
-    margin-top: 30px;
-  }
-  .photo {
-    height: 290px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1074px) {
-  .benefits .benefit1 {
-    margin: 20px auto;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 7px;
-    margin-top: 30px;
-  }
-  .photo {
-    height: 280px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .benefits .benefit1 {
-    margin: 50px;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 35px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 7px;
-    margin-top: 30px;
-  }
-  .photo .section1 .gallery {
-    width: 160%;
-    margin-left: -70px;
-  }
-  .photo {
-    height: 300px;
-  }
-}
-@media (min-width: 567px) and (max-width: 767px) {
-  .benefits .benefit1 {
-    margin-left: 135px ;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 7px;
-    margin-top: 30px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 310px;
-  }
- 
-}
-@media (min-width: 650px) and (max-width: 767px) {
-    /* Start Media To Company */
-    .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-      width: 60%;
-    }
-}
-@media (min-width: 576px) and (max-width: 649px) {
-   /* Start Media To Company */
-   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 70%;
-  }
-}
-@media (min-width: 551px) and (max-width: 575px) {
-  .benefits .benefit1 {
-    margin-left: 150px ;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 5px;
-    margin-top: 30px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 310px;
-  }
-   /* Start Media To Company */
-   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 85%;
-  }
-}
-@media (min-width: 541px) and (max-width: 550px) {
-  .benefits .benefit1 {
-    margin-left: 140px ;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 5px;
-    margin-top: 30px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 300px;
-  }
-   /* Start Media To Company */
-   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 85%;
-  }
-}
-@media (min-width: 526px) and (max-width: 540px) {
-  .benefits .benefit1 {
-    margin-left: 130px ;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 5px;
-    margin-top: 30px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 300px;
-  }
-  /* Start Media To Company */
-  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 85%;
-  }
-}
-@media (min-width: 501px) and (max-width: 525px) {
-  .benefits .benefit1 {
-    margin-left: 115px;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 5px;
-    margin-top: 30px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 300px;
-  }
-  /* Start Media To Company */
-  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 85%;
-  }
-}
-/* Width 400px*/
-@media (min-width: 451px) and (max-width: 500px) {
-  .benefits .benefit1 {
-    margin-left: 100px;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 5px;
-    margin-top: 30px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 270px;
-  }
-  /* Start Media To Company */
-  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 80%;
-  }
-}
-@media (min-width: 426px) and (max-width: 450px) {
-  .benefits .benefit1 {
-    margin-left: 88px;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 5px;
-    margin-top: 25px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 250px;
-  }
-  /* Start Media To Company */
-  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 80%;
-  }
-}
-@media (min-width: 400px) and (max-width: 425px) {
-  .benefits .benefit1 {
-    margin-left: 75px;
-  }
-  .benefits .benefit1 .front header img {
-    position: relative;
-    top: 30px;
-  }
-  .benefits .benefit1 .back p {
-    font-size: 18px;
-    padding: 5px;
-    margin-top: 20px;
-  }
-  /* Start Media To Photo */
-  .photo {
-    height: 230px;
-  }
-  /* Start Media To Company */
-  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
-    width: 80%;
-  }
-}
-
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -1665,6 +1465,269 @@ textarea.input100 {
   .alert-validate::before {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+
+
+
+/* Start Media To About */
+
+ /* Start Media To Progrees */
+@media (min-width: 841px) and (max-width: 899px) {
+    /* Start Media To Progrees */
+    .All .progrees1 .write h3 {
+      font-size: 15px;
+      font-weight: bold;
+      margin: 20px 0 0 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 840px) {
+   /* Start Media To Progrees */
+   .All .progrees1 .write h3 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+  }
+}
+@media (min-width: 567px) and (max-width: 767px) {
+  .benefits .benefit1 {
+    margin-left: 135px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 7px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 310px;
+  }
+ 
+}
+@media (min-width: 650px) and (max-width: 767px) {
+    /* Start Media To Company */
+    .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+      width: 60%;
+    }
+    /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+@media (min-width: 576px) and (max-width: 649px) {
+   /* Start Media To Company */
+   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 70%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+@media (min-width: 551px) and (max-width: 575px) {
+  .benefits .benefit1 {
+    margin-left: 150px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 310px;
+  }
+   /* Start Media To Company */
+   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+@media (min-width: 541px) and (max-width: 550px) {
+  .benefits .benefit1 {
+    margin-left: 140px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 300px;
+  }
+   /* Start Media To Company */
+   .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+@media (min-width: 526px) and (max-width: 540px) {
+  .benefits .benefit1 {
+    margin-left: 130px ;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 300px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+@media (min-width: 501px) and (max-width: 525px) {
+  .benefits .benefit1 {
+    margin-left: 115px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 300px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 85%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+/* Width 400px*/
+@media (min-width: 451px) and (max-width: 500px) {
+  .benefits .benefit1 {
+    margin-left: 100px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 270px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 80%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+@media (min-width: 426px) and (max-width: 450px) {
+  .benefits .benefit1 {
+    margin-left: 88px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 25px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 250px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 80%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
+  }
+}
+@media (min-width: 400px) and (max-width: 425px) {
+  .benefits .benefit1 {
+    margin-left: 75px;
+  }
+  .benefits .benefit1 .front header img {
+    position: relative;
+    top: 30px;
+  }
+  .benefits .benefit1 .back p {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  /* Start Media To Photo */
+  .photo {
+    height: 230px;
+  }
+  /* Start Media To Company */
+  .Company .company1 a img,.Company .company2 a img,.Company .company3 a img,.Company .company4 a img{
+    width: 80%;
+  }
+  /* Start Media To Progrees */
+  .All .progrees1 .write h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 -10px;
   }
 }
 
