@@ -8,8 +8,7 @@
 body{
     width: 100%;
     background-color: #ffffff;
-   font-family: Montserrat-Regular, sans-serif;
-   margin: 0px; 
+    margin: 0px; 
 	  padding: 0px; 
 }
 
@@ -796,8 +795,7 @@ margin-top: 50px;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
- 
-	padding: 55px 50px;
+	padding: 10px 10px;
 	margin-top: 80px;
 }
  
@@ -1139,6 +1137,7 @@ iframe {
   align-items: center;
   padding: 15px;
   background: #f2f2f2;
+  margin-top: 100px;
   
 }
 
