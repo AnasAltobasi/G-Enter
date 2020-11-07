@@ -36,6 +36,26 @@ body {
   margin-right: 30px;
 }
 
+#btnS {
+  position: fixed;
+  right: 30px;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #45C2B4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#btnS:active {
+  background-color: #45C2B4;
+}
+
 @font-face {
   font-family: Montserrat-Regular;
   src: url('../fonts/montserrat/Montserrat-Regular.ttf');
@@ -56,9 +76,13 @@ body {
   src: url('../fonts/montserrat/Montserrat-Medium.ttf');
 }
 
-
-
 .header-form bdi {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: -1px 0px 12px #45C2B4;
+}
+
+.header-form label {
   font-size: 20px;
   font-weight: bold;
   text-shadow: -1px 0px 12px #45C2B4;
@@ -238,7 +262,6 @@ input.input1 {
   height: 50px;
   border-radius: 25px;
   padding: 0 30px;
-  
 }
 
 input.input1+.shadow-input1 {
@@ -364,6 +387,12 @@ textarea.input1+.shadow-input1 {
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
+@media (max-width: 1024px) {
+  .card-body {
+    width: 107%;
+  }
+}
+
 @media (max-width: 1200px) {
   .contact1-pic {
     width: 33.5%;
@@ -377,6 +406,13 @@ textarea.input1+.shadow-input1 {
   .container-contact1 {
     padding: 90px 80px 88px 90px;
   }
+  .cardVedio {
+    height: unset !important;
+  }
+  .card .card-body:first-child, .card .card-body:nth-child(2), .card .card-body:nth-child(3) {
+    width: 100%;
+    height: 438px !important;
+  }
   .dropdown {
     width: 100%;
   }
@@ -388,9 +424,18 @@ textarea.input1+.shadow-input1 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container-contact1 {
     padding: 90px 80px 88px 80px;
+  }
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 23px;
+  }
+  .cardVedio {
+    height: 100%;
+  }
+  .cardnew {
+    height: 100% !important;
   }
   .contact1-pic {
     display: none;
@@ -403,6 +448,63 @@ textarea.input1+.shadow-input1 {
 @media (max-width: 576px) {
   .container-contact1 {
     padding: 90px 15px 88px 15px;
+  }
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 444px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 425px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 280px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 248px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 236px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 220px) {
+  .card .card-body p:first-child, .card .card-body p:nth-child(2), .card .card-body p:nth-child(3) {
+    font-size: 12px;
   }
 }
 
@@ -845,6 +947,39 @@ textarea.input1+.shadow-input1 {
 }
 
 /*End progrees bar */
+
+/************************ Start Css To Counter Up ********************************************/
+
+.counter-up {
+  background-color: #45C2B4;
+}
+
+.counter-up .counter1 {
+  padding: 20px;
+}
+
+.counter-up .counter1 p {
+  font-size: 20px;
+  color: white;
+}
+
+.counter-up .counter1 .counter {
+  font-size: 70px;
+}
+
+.counter-up .counter1 .icon-box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid grey;
+  margin: 20px auto;
+  transform: rotate(45deg);
+}
+
+.counter-up .counter1 .icon-box .fa {
+  font-size: 40px;
+  margin: 25px auto;
+  transform: rotate(-45deg);
+}
 
 .main {
   max-height: 550px;
