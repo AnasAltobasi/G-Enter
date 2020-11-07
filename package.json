@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery.counterup": "^2.1.0",
+    "waypoints": "^4.0.1"
+  }
+}
