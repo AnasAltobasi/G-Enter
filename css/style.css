@@ -757,7 +757,6 @@ textarea.input1+.shadow-input1 {
 
 /* Start Css To TypeWrite */
 
-
 .welcome p {
   font-weight: bold;
   font-size: 25px;
@@ -900,6 +899,54 @@ textarea.input1+.shadow-input1 {
 
 /* Start Css To Photo */
 
+#btnS {
+  margin: 0 0 0 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: scale(1);
+  box-shadow: 0 0 0 0 #45c2b4;
+  animation: pulse 0.4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #45c2b4;
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px #45c2b4;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #45c2b4;
+  }
+}
+
+.butt {
+  margin: 0 0 0 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: scale(1);
+  box-shadow: 0 0 0 0 #45c2b4;
+  animation: pulse 0.4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #45c2b4;
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px #45c2b4;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #45c2b4;
+  }
+}
+
 .photo {
   height: 350px;
   background-color: #45c2b4;
@@ -909,8 +956,6 @@ textarea.input1+.shadow-input1 {
 .photo .section1 {
   padding: 50px;
 }
-
-
 
 .Caption h4 {
   font-weight: bold;
