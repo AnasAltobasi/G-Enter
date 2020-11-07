@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="css/style.css">
         <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
         <!--     Fonts and icons     -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <!-- CSS Files -->
         <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
         <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -146,8 +147,7 @@
 </div> -->
         <!---------------------- End Images -------------------------->
         <div class="container">
-            <div class="row">
-                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 pad-0" style="max-width: 95%;">
+                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 pad-0" style="max-width: 112%;">
                     <div class="MainSlider">
                         <img src="img/11.jpeg">
                         <img src="img/12.jpeg" alt="">
@@ -181,7 +181,6 @@
                     <div class="clear"></div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="clear"></div>
 
@@ -361,6 +360,9 @@
                 </div>
             </div>
         </footer>
+        <button id="btnS">
+            <i class="fas fa-arrow-up"></i>
+        </button>
         <!-- End Foote -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
         <!--   Core JS Files   -->
@@ -385,7 +387,14 @@
         <script src="./node_modules/jquery.counterup/jquery.counterup.js"></script>
         <script>
             $(document).ready(function () {
-                
+                 const btn = document.querySelector('#btnS');
+                btn.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                });
                 $('.Slider').slick({
                     infinite: true,
                     dots: true,

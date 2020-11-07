@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="css/style.css">
         <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
         <!--     Fonts and icons     -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <!-- CSS Files -->
         <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
         <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -261,7 +262,9 @@
     </div>
 </footer>
 <!-- End Foote -->
-
+<button id="btnS">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
         <!--   Core JS Files   -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
@@ -279,7 +282,16 @@
         <!--  Google Maps Plugin    -->
         <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
         <script src="./assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
-       
+       <script>
+            const btn = document.querySelector('#btnS');
+                btn.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                });
+       </script>
     </body>
 
 </html>
