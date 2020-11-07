@@ -897,28 +897,7 @@ textarea.input1+.shadow-input1 {
   color: red;
 }
 
-#btnS {
-  transform: scale(1);
-  box-shadow: 0 0 0 0 #45c2b4;
-  animation: pulse 0.4s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 #45c2b4;
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px #45c2b4;
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 #45c2b4;
-  }
-}
-
-.butt {
+#btnS, .butt, #student, #company {
   transform: scale(1);
   box-shadow: 0 0 0 0 #45c2b4;
   animation: pulse 0.4s infinite;
