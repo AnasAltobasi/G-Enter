@@ -13,7 +13,7 @@ body {
 }
 
 .navbar-expand-lg .navbar-collapse {
-  margin-left: 400px;
+  margin-left: 200px;
   font-weight: bolder;
 }
 
@@ -1156,6 +1156,12 @@ textarea.input1+.shadow-input1 {
   border: 1px solid grey;
   margin: 20px auto;
   transform: rotate(45deg);
+}
+
+.counter-up .counter1 .icon-box .fas {
+  font-size: 40px;
+  margin: 25px auto;
+  transform: rotate(-45deg);
 }
 
 .counter-up .counter1 .icon-box .fa {
