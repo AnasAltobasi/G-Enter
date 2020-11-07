@@ -1514,20 +1514,23 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .txt2 {
   font-family: Poppins-Regular;
   font-size: 15px;
   line-height: 1.6;
-  color: #00ad5f;
+  color: #45c2b4;
+  text-transform: uppercase;
 }
 
 .txt3 {
   font-family: Poppins-Regular;
   font-size: 15px;
   line-height: 1.6;
-  color: #00ad5f;
+  color: #45c2b4;
+  text-transform: uppercase;
 }
 
 /*==================================================================
