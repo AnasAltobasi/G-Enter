@@ -757,10 +757,6 @@ textarea.input1+.shadow-input1 {
 
 /* Start Css To TypeWrite */
 
-.welcome {
-  text-align: center;
-  margin: 30px auto;
-}
 
 .welcome p {
   font-weight: bold;
@@ -914,10 +910,7 @@ textarea.input1+.shadow-input1 {
   padding: 50px;
 }
 
-.Caption {
-  margin-top: 50px;
-  margin-bottom: -45px;
-}
+
 
 .Caption h4 {
   font-weight: bold;
@@ -927,6 +920,7 @@ textarea.input1+.shadow-input1 {
   border-radius: 5px;
   box-shadow: 10px 10px 8px grey;
   transition: all 1s ease-in-out;
+  text-align: center;
 }
 
 .Caption h4:hover {
