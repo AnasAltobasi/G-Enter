@@ -897,12 +897,7 @@ textarea.input1+.shadow-input1 {
   color: red;
 }
 
-/* Start Css To Photo */
-
 #btnS {
-  margin: 0 0 0 10px;
-  cursor: pointer;
-  border-radius: 50%;
   transform: scale(1);
   box-shadow: 0 0 0 0 #45c2b4;
   animation: pulse 0.4s infinite;
@@ -924,9 +919,6 @@ textarea.input1+.shadow-input1 {
 }
 
 .butt {
-  margin: 0 0 0 10px;
-  cursor: pointer;
-  border-radius: 50%;
   transform: scale(1);
   box-shadow: 0 0 0 0 #45c2b4;
   animation: pulse 0.4s infinite;
@@ -946,6 +938,8 @@ textarea.input1+.shadow-input1 {
     box-shadow: 0 0 0 0 #45c2b4;
   }
 }
+
+/* Start Css To Photo */
 
 .photo {
   height: 350px;
