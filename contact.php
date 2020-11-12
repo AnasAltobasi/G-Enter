@@ -83,6 +83,9 @@ if($check&&$Error_flag_email==false&&$Error_flag_fname==false&&$Error_flag_lname
     }
   }
 }
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
