@@ -32,7 +32,7 @@ $Error_array=array(
     $Error_flag_university=false;
     //Check For Empty
     if(isset($_POST["submit"])){
-    if(empty($namearabic) ||empty($nameenglish) || empty($email) || empty($phone) || empty($phone2) || empty($university) || empty($major) || empty($skills))
+    if(empty($namearabic) ||empty($nameenglish) || empty($email) || empty($phone) || empty($university) || empty($major) || empty($skills))
     {
         $error="Please Fill All Requires In Form";
         $check = false;
@@ -70,7 +70,7 @@ $Error_array=array(
                 $Error_flag_email=true;
             }
     //validation phone
-        if(empty($phone)){
+    if(empty($phone)){
         $Error_array['phone']="Phone Number Empty";
         $Error_flag_phone=true;
         }
@@ -80,20 +80,19 @@ $Error_array=array(
         $Error_flag_phone=true;
     }
      //validation phone2
-     if(empty($phone2)){
-        $Error_array['phone2']="Phone Number Empty";
-        $Error_flag_phone2=true;
+    if(empty($phone2)){
+        $Error_flag_phone2=false;
         }
     elseif(!preg_match('/^[0-9]{10}$/',$phone2))
-    {
-        $Error_array['phone2']="Invalid Number";
-        $Error_flag_phone2=true;
-    }
+        {
+            $Error_array['phone2']="Invalid Number";
+            $Error_flag_phone2=true;
+        }
     
 
 
     //validation university
-        if(empty($university)){
+    if(empty($university)){
         $Error_array['university']="Please Enter Your university";
         $Error_flag_university=true;
         }
@@ -337,34 +336,34 @@ if($check&&$Error_flag_email==false&&$Error_flag_namearabic==false&&$Error_flag_
                          
                     <div class="wrap-input1 validate-input">
                         <input id="nameenglish" class="input1" type="text" name="nameenglish" placeholder="Your Name (Three Parts) in English*">
-                        <?php if($Error_flag_nameenglish==true){if($Error_array['nameenglish']!==null)echo "<div class='alert alert-danger'>".$Error_array['nameenglish']."</div>";}?>
+                        <?php if($Error_flag_nameenglish==true){if($Error_array['nameenglish']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['nameenglish']."</div>";}?>
                         <span class="shadow-input1"></span>
                     </div>
 
                     <div class="wrap-input1 validate-input">
                         <input id="namearabic" class="input1" type="text" name="namearabic"
                             placeholder="Your Name (Three Parts) in Arabic*">
-                            <?php if($Error_flag_namearabic==true){if($Error_array['namearabic']!==null)echo "<div class='alert alert-danger'>".$Error_array['namearabic']."</div>";}?>
+                            <?php if($Error_flag_namearabic==true){if($Error_array['namearabic']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['namearabic']."</div>";}?>
 
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input id="university" class="input1" type="text" name="university" placeholder="University / College *">
-                        <?php if($Error_flag_university==true){if($Error_array['university']!==null)echo "<div class='alert alert-danger'>".$Error_array['university']."</div>";}?>
+                        <?php if($Error_flag_university==true){if($Error_array['university']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['university']."</div>";}?>
 
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input id="major" class="input1" type="text" name="major"
                             placeholder="Major(For example Mechanical,Engineering,...)*">
-                            <?php if($Error_flag_major==true){if($Error_array['major']!==null)echo "<div class='alert alert-danger'>".$Error_array['major']."</div>";}?>
+                            <?php if($Error_flag_major==true){if($Error_array['major']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['major']."</div>";}?>
 
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input id="skills" class="input1" type="text" name="skills"
                             placeholder="Mention Five Skills that you are really good in*">
-                            <?php if($Error_flag_skills==true){if($Error_array['skills']!==null)echo "<div class='alert alert-danger'>".$Error_array['skills']."</div>";}?>
+                            <?php if($Error_flag_skills==true){if($Error_array['skills']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['skills']."</div>";}?>
 
                         <span class="shadow-input1"></span>
                     </div>
@@ -373,19 +372,19 @@ if($check&&$Error_flag_email==false&&$Error_flag_namearabic==false&&$Error_flag_
                     </span>
                     <div class="wrap-input1 validate-input">
                         <input id="email" class="input1" type="text" name="email" placeholder="e-mail Address *">
-                        <?php if($Error_flag_email==true){if($Error_array['email']!==null)echo "<div class='alert alert-danger'>".$Error_array['email']."</div>";}?>
+                        <?php if($Error_flag_email==true){if($Error_array['email']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['email']."</div>";}?>
 
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input id="phone" class="input1" type="text" name="phone" placeholder="Primary Phone number *">
-                        <?php if($Error_flag_phone==true){if($Error_array['phone']!==null)echo "<div class='alert alert-danger'>".$Error_array['phone']."</div>";}?>
+                        <?php if($Error_flag_phone==true){if($Error_array['phone']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['phone']."</div>";}?>
 
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1 validate-input">
-                        <input  id="phone2" class="input1" type="text" name="phone2" placeholder="Secondary Phone Number">
-                        <?php if($Error_flag_phone2==true){if($Error_array['phone2']!==null)echo "<div class='alert alert-danger'>".$Error_array['phone2']."</div>";}?>
+                        <input  id="phone2" class="input1" type="text" name="phone2" placeholder="Secondary Phone Number(optional)">
+                        <?php if($Error_flag_phone2==true){if($Error_array['phone2']!==null)echo "<div class='alert alert-danger mt-1'>".$Error_array['phone2']."</div>";}?>
 
                         <span class="shadow-input1"></span>
                     </div>
