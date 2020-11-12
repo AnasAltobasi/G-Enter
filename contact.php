@@ -1,3 +1,89 @@
+<?php include "DataBaseConnection.php";?>
+<?php
+$fname=isset($_POST["first-name"]) ? $_POST["first-name"] : "";
+$lname=isset($_POST["last-name"]) ? $_POST["last-name"] : "";
+$email=isset($_POST["email"]) ? $_POST["email"]: "";
+$phone=isset($_POST["phone"])? $_POST["phone"]: "";
+$message=isset($_POST["message"])? $_POST["message"]: "";
+$send=isset($_POST["submit"])? $_POST["submit"]: "";
+
+$Error_array=array(
+    // register errors
+    'fname'=>'',
+    'lname'=>'',
+    'email'=>'',
+    'phone'=>'',
+    'message'=>'');
+    $error = null;
+    $check = true;
+    $Error_flag_fname=false;
+    $Error_flag_lname=false;
+    $Error_flag_email=false;
+    $Error_flag_phone=false;
+    $Error_flag_message=false;
+    //Check For Empty
+    if(isset($_POST["submit"])){
+    if(empty($fname) ||empty($lname) || empty($email) || empty($phone) || empty($message))
+    {
+        $error="Please Fill All Requires In Form";
+        $check = false;
+    }
+    //FirstName Validation
+     if(empty($fname)){
+             $Error_array['fname']="First Name Empty";
+             $Error_flag_fname=true;
+        }
+    elseif(!preg_match('/^[_\s[:alpha:]]+$/',$fname)&&(!preg_match("/\p{Arabic}/u",$fname)))
+            {
+                $Error_array['fname']="Only letters";
+                $Error_flag_fname=true;
+            }
+    //LastName Validation
+     if(empty($lname)){
+             $Error_array['lname']="Last Name Empty";
+             $Error_flag_lname=true;
+        }
+    elseif(!preg_match('/^[_\s[:alpha:]]+$/',$lname)&&(!preg_match("/\p{Arabic}/u",$lname)))
+            {
+                $Error_array['lname']="Only letters";
+                $Error_flag_lname=true;
+            }
+    //validation email
+        if(empty($email))
+        {
+            $Error_array['email']="Email Empty";
+            $Error_flag_email=true;
+            
+        }
+    elseif(!preg_match('/^[-_[:alnum:]]+(\.[-_[:alnum:]]+)*@[[:alnum:]]+(\.[[:alnum:]]+)*(\.[[:alpha:]]{2,})$/',$email))
+            {
+                $Error_array['email']="Invalid Email";
+                $Error_flag_email=true;
+            }
+    //validation phone
+        if(empty($phone)){
+        $Error_array['phone']="Phone Number Empty";
+        $Error_flag_phone=true;
+        }
+    elseif(!preg_match('/^[0-9]{10}$/',$phone))
+    {
+        $Error_array['phone']="Invalid Number";
+        $Error_flag_phone=true;
+    }
+    //validation phone
+        if(empty($message)){
+        $Error_array['message']="Please Enter Your Message";
+        $Error_flag_message=true;
+        }
+    //Insert To Table Contact In The DataBase
+if($check&&$Error_flag_email==false&&$Error_flag_fname==false&&$Error_flag_lname==false&&$Error_flag_phone==false&&$Error_flag_message==false){
+    if('$submit'){
+    $query="INSERT INTO contact(firstname,lastname,email,phonenumber,message)VALUES('$fname','$lname','$email','$phone','$message')";
+    $result=mysqli_query($conn,$query);
+    }
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +141,7 @@
         <!-- NavBar Start -->
         <nav class="navbar  navbar-expand-lg bg-primary ">
             <div class="container">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.php">
                         <img src="img/G-EnterLogo.jpg" alt="IMG" width="45px" style="border-radius: 45px;">
                         <span style="font-size:18px;">&nbspEntr</span>
                     </a>
@@ -69,16 +155,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" href="about.php">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="projectForm.html">G Project</a>
+                            <a class="nav-link" href="projectForm.php">G Project</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link " href="contact.html">Contact Us</a>
+                            <a class="nav-link " href="contact.php">Contact Us</a>
                         </li>
         
                     </ul>
@@ -93,37 +179,66 @@
                     <span class="contact100-form-title">
                         Contact us 
                     </span>
-        
+                     <?php
+                                if($check==false)
+                                {
+                                    echo "<div  class='alert alert-danger text-justify text-center col-xl-12'><center>$error</center></div>";
+                                }
+                                elseif($Error_flag_phone==true||$Error_flag_fname==true||$Error_flag_lname==true||$Error_flag_email==true||$Error_flag_message==true){
+                                    echo "<div class='alert alert-danger text-justify text-center col-xl-12'><center>Try Again You Have A Problem</center></div>";
+                                }
+                                elseif(isset($_POST["submit"]))
+                                {
+                                    echo "<div class='alert alert-success text-justify text-center col-xl-12'><center>Your Message Sent Successfully</center></div>";
+                                }
+                         ?>
                     <label class="label-input100" for="first-name">Name*</label>
                     <div class="wrap-input100 rs1-wrap-input100 validate-input" >
                         <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+                        <?php if($Error_flag_fname==true){if($Error_array['fname']!==null)echo "<div class='alert alert-danger'>".$Error_array['fname']."</div>";}?>
                         <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 rs2-wrap-input100 validate-input" >
-                        <input class="input100" type="text" name="last-name" placeholder="Last name">
+                        <input class="input100" type="text" name="last-name" placeholder="last-name">
+                        <?php if($Error_flag_lname==true){if($Error_array['lname']!==null)echo "<div class='alert alert-danger'>".$Error_array['lname']."</div>";}?>
                         <span class="focus-input100"></span>
                     </div>
         
                     <label class="label-input100" for="email">Email Address*</label>
                     <div class="wrap-input100 validate-input" >
                         <input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+                        <?php if($Error_flag_email==true){if($Error_array['email']!==null)echo "<div class='alert alert-danger'>".$Error_array['email']."</div>";}?>
                         <span class="focus-input100"></span>
                     </div>
         
                     <label class="label-input100" for="phone">Phone Number*</label>
                     <div class="wrap-input100">
                         <input id="phone" class="input100" type="text" name="phone" placeholder="Eg. 070000000">
+                        <?php if($Error_flag_phone==true){if($Error_array['phone']!==null)echo "<div class='alert alert-danger'>".$Error_array['phone']."</div>";}?>
                         <span class="focus-input100"></span>
                     </div>
         
                     <label class="label-input100" for="message">Message*</label>
                     <div class="wrap-input100 validate-input" >
                         <textarea id="message" class="input100" name="message" placeholder="Write  a message"></textarea>
+                        <?php if($Error_flag_message==true){if($Error_array['message']!==null)echo "<div class='alert alert-danger'>".$Error_array['message']."</div>";}?>
                         <span class="focus-input100"></span>
                     </div>
-        
+         <?php
+                                if($check==false)
+                                {
+                                    echo "<div  class='alert alert-danger text-justify text-center col-xl-12'><center>$error</center></div>";
+                                }
+                                elseif($Error_flag_phone==true||$Error_flag_fname==true||$Error_flag_lname==true||$Error_flag_email==true||$Error_flag_message==true){
+                                    echo "<div class='alert alert-danger text-justify text-center col-xl-12'><center>Try Again You Have A Problem</center></div>";
+                                }
+                                elseif(isset($_POST["submit"]))
+                                {
+                                    echo "<div class='alert alert-success text-justify text-center col-xl-12'><center>Your Message Sent Successfully</center></div>";
+                                }
+                         ?>
                     <div class="container-contact1-form-btn col-md-12 text-center mt-4">
-                        <button class="contact1-form-btn submit ">
+                        <button class="contact1-form-btn submit " type="submit" name="submit">
                             <span>
                                 Send
                                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -131,6 +246,7 @@
                         </button>
                     </div>
                 </form>
+                
         
                 <div class="contact100-more flex-col-c-m" style="background-image: url('img/16.png');">
                     <div class="flex-w size1 p-b-47">
@@ -183,9 +299,6 @@
                 </div>
             </div>
         </div>
-        
-        
-        
         <div id="dropDownSelect1"></div>
         <div class="container">
         <iframe id="map"
@@ -193,33 +306,6 @@
          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
          tabindex="0"></iframe>
         </div>
-       
-        
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Header End -->
 <!-- Footer Start -->
 <footer class="footer-distributed">
@@ -238,15 +324,13 @@
             <p>
                 <h3 style="color: #fff;margin-top: 0px;">Links</h3>
             <p class="footer-links">
-               <a href="index.html">Home</a>
+               <a href="index.php">Home</a>
             
-                <a href="about.html">About Us</a>
+                <a href="about.php">About Us</a>
             
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
             
-                <a href="projectForm.html">G-Project</a>
-            
-            
+                <a href="projectForm.php">G-Project</a>
             </p>
         </div> 
     <div class="footer-right">
@@ -268,7 +352,6 @@
 <button id="btnS">
     <i class="fas fa-arrow-up"></i>
 </button>
-
         <!--   Core JS Files   -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
         <!--   Core JS Files   -->
@@ -296,5 +379,4 @@
                 });
        </script>
     </body>
-
 </html>

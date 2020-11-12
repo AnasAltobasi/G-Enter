@@ -1,6 +1,6 @@
+<?php include "DataBaseConnection.php";?>
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,12 +28,11 @@
         
 
     </head>
-
     <body>
         <!-- NavBar Start -->
         <nav class="navbar  navbar-expand-lg bg-primary ">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="img/G-EnterLogo.jpg" alt="IMG" width="45px" style="border-radius: 45px;">
                     <span style="font-size:18px;">&nbspEntr</span>
                 </a>
@@ -47,16 +46,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" href="about.php">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="projectForm.html">G Project</a>
+                            <a class="nav-link" href="projectForm.php">G Project</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <a class="nav-link" href="contact.php">Contact Us</a>
                         </li>
 
                     </ul>
@@ -136,7 +135,7 @@
                                 </span>
                             </p>
                             <div class="col-md-12 butt text-center mb-5 ">
-                                <span> <a href="projectForm.html"> <button type="button" class="btn btn-success">G Prpject</button></a></span>
+                                <span> <a href="projectForm.php"> <button type="button" class="btn btn-success">G Prpject</button></a></span>
                             </div>
                         </div>
                     </div>
@@ -334,13 +333,13 @@
             <p>
                 <h3 style="color: #fff;margin-top: 0px;">Links</h3>
             <p class="footer-links">
-               <a href="index.html">Home</a>
+               <a href="index.php">Home</a>
             
-                <a href="about.html">About Us</a>
+                <a href="about.php">About Us</a>
             
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
             
-                <a href="projectForm.html">G-Project</a>
+                <a href="projectForm.php">G-Project</a>
             
             
             </p>
