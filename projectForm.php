@@ -68,7 +68,7 @@ $Error_array=array(
         $Error_array['uni']="University Name Empty";
         $Error_flag_uni=true;
         }
-    elseif(!preg_match('/^[_\s[:alpha:]]+$/',$uni)&&(!preg_match("/\p{Arabic}/u",$uni)))
+    elseif(!preg_match('/^[_\s[:alpha:]\_\-]*$/',$uni)&&(!preg_match("/\p{Arabic}/u",$uni)))
         {
             $Error_array['uni']="Only letters In Arabic Or English";
             $Error_flag_uni=true;
