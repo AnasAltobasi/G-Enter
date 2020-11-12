@@ -1,4 +1,97 @@
 <?php include "DataBaseConnection.php";?>
+<?php
+$fname=isset($_POST["fullname"]) ? $_POST["fullname"] : "";
+$email=isset($_POST["email"]) ? $_POST["email"]: "";
+$phone=isset($_POST["numberphone"])? $_POST["numberphone"]: "";
+$uni=isset($_POST["uni_name"])? $_POST["uni_name"]: "";
+$major=isset($_POST["major"])? $_POST["major"]: "";
+$type=isset($_POST["type"])? $_POST["type"]: "";
+$data=isset($_POST["data"])? $_POST["data"]: "";
+$send=isset($_POST["send"])? $_POST["send"]: "";
+$Error_array=array(
+    // register errors
+    'fullname'=>'',
+    'email'=>'',
+    'numberphone'=>'',
+    'data'=>'',
+    'type'=>'',
+    'uni'=>'',
+    'major'=>'',);
+    $error = null;
+    $check = true;
+    $Error_flag_fullname=false;
+    $Error_flag_major=false;
+    $Error_flag_email=false;
+    $Error_flag_phone=false;
+    $Error_flag_uni=false;
+//Check For Empty
+    if(isset($_POST["send"])){
+    if(empty($fname) ||empty($uni) || empty($email) || empty($phone) || empty($type)||empty($major))
+    {
+        $error="Please Fill All Requires In Form";
+        $check = false;
+    }
+    //FullName Validation
+     if(empty($fname)){
+             $Error_array['fullname']="Name Empty";
+             $Error_flag_fullname=true;
+        }
+    elseif(!preg_match('/^[_\s[:alpha:]]+$/',$fname)&&(!preg_match("/\p{Arabic}/u",$fname)))
+            {
+                $Error_array['fullname']="Only letters";
+                $Error_flag_fullname=true;
+            }
+            //validation email
+    if(empty($email))
+        {
+            $Error_array['email']="Email Empty";
+            $Error_flag_email=true;
+            
+        }
+    elseif(!preg_match('/^[-_[:alnum:]]+(\.[-_[:alnum:]]+)*@[[:alnum:]]+(\.[[:alnum:]]+)*(\.[[:alpha:]]{2,})$/',$email))
+            {
+                $Error_array['email']="Invalid Email";
+                $Error_flag_email=true;
+            }
+            //validation phone
+    if(empty($phone)){
+        $Error_array['numberphone']="Phone Number Empty";
+        $Error_flag_phone=true;
+        }
+    elseif(!preg_match('/^[0-9]{10}$/',$phone))
+    {
+        $Error_array['numberphone']="Invalid Number";
+        $Error_flag_phone=true;
+    }
+      //validation University Name
+    if(empty($uni)){
+        $Error_array['uni']="University Name Empty";
+        $Error_flag_uni=true;
+        }
+    elseif(!preg_match('/^[_\s[:alpha:]]+$/',$uni)&&(!preg_match("/\p{Arabic}/u",$uni)))
+        {
+            $Error_array['uni']="Only letters In Arabic Or English";
+            $Error_flag_uni=true;
+        }
+         //validation University Major
+    if(empty($major)){
+        $Error_array['major']=" University Major Empty";
+        $Error_flag_major=true;
+        }
+    elseif(!preg_match('/^[_\s[:alpha:]]+$/',$major)&&(!preg_match("/\p{Arabic}/u",$major)))
+        {
+            $Error_array['major']="Only letters In Arabic Or English";
+             $Error_flag_major=true;
+        }
+ //send data to database
+    if($check&&$Error_flag_email==false&&$Error_flag_fullname==false&&$Error_flag_phone==false&&$Error_flag_uni==false&&$Error_flag_major==false){
+    if('$send'){
+    $query="INSERT INTO project(fullname,email,numberphone,uni_name,major,type,information)VALUES('$fname','$email','$phone','$uni','$major','$type','$data')";
+    $result=mysqli_query($conn,$query);
+}
+  }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,31 +236,49 @@ select:-moz-focusring {
                     The team will contact you as soon as possible.
                     Note: the service is paid (at a competitive price)
                     </span>
+                    <?php
+                                if($check==false)
+                                {
+                                    echo "<div  class='alert alert-danger text-justify text-center col-xl-12' style='border-radius: 40px;'><center>$error</center></div>";
+                                }
+                                elseif($Error_flag_email==true||$Error_flag_fullname==true||$Error_flag_uni==true||$Error_flag_major==true||$Error_flag_phone==true){
+                                    echo "<div class='alert alert-danger text-justify text-center col-xl-12' style='border-radius: 40px;'><center>Try Again You Have A Problem</center></div>";
+                                }
+                                elseif(isset($_POST["send"]))
+                                {
+                                    echo "<div class='alert alert-success text-justify text-center col-xl-12' style='border-radius: 40px;'><center>Your request has been submitted. You will be contacted soon</center></div>";
+                                }
+                         ?>
                     <div class="wrap-input1 validate-input">
                         <input class="input1" type="text" name="fullname" placeholder="Full Name*">
                         <span class="shadow-input1"></span>
+                        <?php if($Error_flag_fullname==true){if($Error_array['fullname']!==null)echo "<div class='alert alert-danger' style='border-radius: 40px;' >".$Error_array['fullname']."</div>";}?>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input class="input1" type="email" name="email" placeholder="Email*">
                         <span class="shadow-input1"></span>
+                        <?php if($Error_flag_email==true){if($Error_array['email']!==null)echo "<div class='alert alert-danger' style='border-radius: 40px;'>".$Error_array['email']."</div>";}?>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input class="input1" type="text" name="numberphone" placeholder="Number Phone*">
                         <span class="shadow-input1"></span>
+                         <?php if($Error_flag_phone==true){if($Error_array['numberphone']!==null)echo "<div class='alert alert-danger' style='border-radius: 40px;'>".$Error_array['numberphone']."</div>";}?>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input class="input1" type="text" name="uni_name" placeholder="University Name*">
                         <span class="shadow-input1"></span>
+                         <?php if($Error_flag_uni==true){if($Error_array['uni']!==null)echo "<div class='alert alert-danger' style='border-radius: 40px;'>".$Error_array['uni']."</div>";}?>
                     </div>
                     <div class="wrap-input1 validate-input">
                         <input class="input1" type="text" name="major" placeholder="University Specialization*">
                         <span class="shadow-input1"></span>
+                         <?php if($Error_flag_major==true){if($Error_array['major']!==null)echo "<div class='alert alert-danger' style='border-radius: 40px;'>".$Error_array['major']."</div>";}?>
                     </div>
                     <div class="header-form col-xs-1 text-center">
                     <label  style="color: #000;font-size: 18px;">The type of project you want to help with</label>
                     </div>
                      <select class="btn dropdown-toggle classic" name="type" data-toggle="dropdown" style="width: 100%;border-radius: 30px;font-size: 13px;z-index: 5000;">
-                        <option value="" >Choose Type:</option>
+                        <option>Choose Type:</option>
                         <option value="Draft article">Draft article</option>
                         <option value="Final graduation project">Final graduation project</option>
                         <option value="Mujamma design and development">Mujamma design and development</option>
@@ -184,7 +295,7 @@ select:-moz-focusring {
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="container-contact1-form-btn">
-                        <button class="contact1-form-btn submit">
+                        <button class="contact1-form-btn submit" name="send">
                             <span>
                                Send
                                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>

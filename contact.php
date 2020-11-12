@@ -76,8 +76,8 @@ $Error_array=array(
         $Error_flag_message=true;
         }
     //Insert To Table Contact In The DataBase
-if($check&&$Error_flag_email==false&&$Error_flag_fname==false&&$Error_flag_lname==false&&$Error_flag_phone==false&&$Error_flag_message==false){
-    if('$submit'){
+   if($check&&$Error_flag_email==false&&$Error_flag_fname==false&&$Error_flag_lname==false&&$Error_flag_phone==false&&$Error_flag_message==false){
+    if('$send'){
     $query="INSERT INTO contact(firstname,lastname,email,phonenumber,message)VALUES('$fname','$lname','$email','$phone','$message')";
     $result=mysqli_query($conn,$query);
     }
@@ -182,19 +182,19 @@ if($check&&$Error_flag_email==false&&$Error_flag_fname==false&&$Error_flag_lname
                      <?php
                                 if($check==false)
                                 {
-                                    echo "<div  class='alert alert-danger text-justify text-center col-xl-12'><center>$error</center></div>";
+                                    echo "<div  class='alert alert-danger text-justify text-center col-xl-12' style='border-radius: 40px;'><center>$error</center></div>";
                                 }
                                 elseif($Error_flag_phone==true||$Error_flag_fname==true||$Error_flag_lname==true||$Error_flag_email==true||$Error_flag_message==true){
-                                    echo "<div class='alert alert-danger text-justify text-center col-xl-12'><center>Try Again You Have A Problem</center></div>";
+                                    echo "<div class='alert alert-danger text-justify text-center col-xl-12' style='border-radius: 40px;'><center>Try Again You Have A Problem</center></div>";
                                 }
                                 elseif(isset($_POST["submit"]))
                                 {
-                                    echo "<div class='alert alert-success text-justify text-center col-xl-12'><center>Your Message Sent Successfully</center></div>";
+                                    echo "<div class='alert alert-success text-justify text-center col-xl-12' style='border-radius: 40px;'><center>Your Message Sent Successfully</center></div>";
                                 }
                          ?>
                     <label class="label-input100" for="first-name">Name*</label>
                     <div class="wrap-input100 rs1-wrap-input100 validate-input" >
-                        <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+                        <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name" value="<?php if(isset($_POST['fname'])) echo $_POST['fname']?>">
                         <?php if($Error_flag_fname==true){if($Error_array['fname']!==null)echo "<div class='alert alert-danger'>".$Error_array['fname']."</div>";}?>
                         <span class="focus-input100"></span>
                     </div>
@@ -224,19 +224,19 @@ if($check&&$Error_flag_email==false&&$Error_flag_fname==false&&$Error_flag_lname
                         <?php if($Error_flag_message==true){if($Error_array['message']!==null)echo "<div class='alert alert-danger'>".$Error_array['message']."</div>";}?>
                         <span class="focus-input100"></span>
                     </div>
-         <?php
+                        <?php
                                 if($check==false)
                                 {
-                                    echo "<div  class='alert alert-danger text-justify text-center col-xl-12'><center>$error</center></div>";
+                                    echo "<div  class='alert alert-danger text-justify text-center col-xl-12' style='border-radius: 40px;'><center>$error</center></div>";
                                 }
                                 elseif($Error_flag_phone==true||$Error_flag_fname==true||$Error_flag_lname==true||$Error_flag_email==true||$Error_flag_message==true){
-                                    echo "<div class='alert alert-danger text-justify text-center col-xl-12'><center>Try Again You Have A Problem</center></div>";
+                                    echo "<div class='alert alert-danger text-justify text-center col-xl-12' style='border-radius: 40px;'><center>Try Again You Have A Problem</center></div>";
                                 }
                                 elseif(isset($_POST["submit"]))
                                 {
-                                    echo "<div class='alert alert-success text-justify text-center col-xl-12'><center>Your Message Sent Successfully</center></div>";
+                                    echo "<div class='alert alert-success text-justify text-center col-xl-12' style='border-radius: 40px;'> <center>Your Message Sent Successfully</center></div>";
                                 }
-                         ?>
+                        ?>
                     <div class="container-contact1-form-btn col-md-12 text-center mt-4">
                         <button class="contact1-form-btn submit " type="submit" name="submit">
                             <span>
