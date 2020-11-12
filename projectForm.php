@@ -216,9 +216,7 @@ select:-moz-focusring {
         <div class="contact1" style="background-color: #92E8DF">
             <div class="container-contact1" style="margin-top: 110px;">
                 <div class="contact1-pic js-tilt" data-tilt>
-                <div class="contact1-pic js-tilt" data-tilt>
                     <img src="img/G-Project.png" alt="IMG">
-                </div>
                 </div>
                 <form class="contact1-form validate-form" action="" method="POST">
                 <div class="container">
